@@ -1,21 +1,21 @@
-%define OTTEMPLATE_MyClass_doc
-"MyClass class.
+%define OTCUBA_VegasAlgorithm_doc
+"VegasAlgorithm class.
 
 Examples
 --------
->>> import ottemplate
->>> a = ottemplate.MyClass()
+>>> import otcuba
+>>> a = otcuba.VegasAlgorithm()
 
 Notes
 -----
 Template module class."
 %enddef
-%feature("docstring") OTTEMPLATE::MyClassImplementation
-OTTEMPLATE_MyClass_doc
+%feature("docstring") OTCUBA::VegasAlgorithmImplementation
+OTCUBA_VegasAlgorithm_doc
 
 // ---------------------------------------------------------------------
 
-%define OTTEMPLATE_MyClass_square_doc
+%define OTCUBA_VegasAlgorithm_square_doc
 "Square of a point.
 
 Parameters
@@ -31,13 +31,13 @@ square : :py:class:`openturns.Point`
 Examples
 --------
 >>> import openturns as ot
->>> import ottemplate
->>> a = ottemplate.MyClass()
+>>> import otcuba
+>>> a = otcuba.VegasAlgorithm()
 >>> point = ot.Point([1.0, 2.0, 3.0])
 >>> a.square(point)
 class=Point name=Unnamed dimension=3 values=[1,4,9]"
 %enddef
-%feature("docstring") OTTEMPLATE::MyClassImplementation::square
-OTTEMPLATE_MyClass_square_doc
+%feature("docstring") OTCUBA::VegasAlgorithmImplementation::square
+OTCUBA_VegasAlgorithm_square_doc
 
 

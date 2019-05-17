@@ -14,14 +14,14 @@ FFLAGS="${FFLAGS:-%optflags}" ; export FFLAGS ; \
 %endif \
 -DBUILD_SHARED_LIBS:BOOL=ON
 
-Name:           ottemplate
+Name:           otcuba
 Version:        0.0
 Release:        0%{?dist}
 Summary:        OpenTURNS module
 Group:          System Environment/Libraries
 License:        LGPLv3+
 URL:            http://www.openturns.org/
-Source0:        http://downloads.sourceforge.net/openturns-modules/ottemplate/ottemplate-%{version}.tar.bz2
+Source0:        http://downloads.sourceforge.net/openturns-modules/otcuba/otcuba-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:  gcc-c++, cmake, swig
 %if 0%{?suse_version}
@@ -32,40 +32,40 @@ BuildRequires:  gcc-gfortran
 BuildRequires:  openturns-devel
 BuildRequires:  python-openturns
 BuildRequires:  python-devel
-Requires:       libottemplate0
+Requires:       libotcuba0
 
 %description
 Template module for OpenTURNS library.
 
-%package -n libottemplate0
-Summary:        OTTemplate development files
+%package -n libotcuba0
+Summary:        OTCuba development files
 Group:          Development/Libraries/C and C++
 
-%description -n libottemplate0
-Dynamic libraries for OTTemplate.
+%description -n libotcuba0
+Dynamic libraries for OTCuba.
 
 %package devel
-Summary:        OTTemplate development files
+Summary:        OTCuba development files
 Group:          Development/Libraries/C and C++
-Requires:       libottemplate0 = %{version}
+Requires:       libotcuba0 = %{version}
 Requires:       openturns-devel
 
 %description devel
-Development files for OTTemplate library.
+Development files for OTCuba library.
 
 %package examples
-Summary:        OTTemplate examples
+Summary:        OTCuba examples
 Group:          Productivity/Scientific/Math
 
 %description examples
-Example files for OTTemplate
+Example files for OTCuba
 
 %package -n python-%{name}
-Summary:        OTTemplate library
+Summary:        OTCuba library
 Group:          Productivity/Scientific/Math
 Requires:       python-openturns
 %description -n python-%{name}
-Python textual interface to OTTemplate uncertainty library
+Python textual interface to OTCuba uncertainty library
 
 %prep
 %setup -q
@@ -89,10 +89,10 @@ rm %{buildroot}%{python_sitearch}/%{name}/*.pyc
 %clean
 rm -rf %{buildroot}
 
-%post -n libottemplate0 -p /sbin/ldconfig 
-%postun -n libottemplate0 -p /sbin/ldconfig 
+%post -n libotcuba0 -p /sbin/ldconfig 
+%postun -n libotcuba0 -p /sbin/ldconfig 
 
-%files -n libottemplate0
+%files -n libotcuba0
 %defattr(-,root,root,-)
 %{_libdir}/*.so.*
 

@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief The external header file of OTTemplate
+ *  @brief The external header file of OTCuba
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -19,11 +19,11 @@
  *
  */
 
-#ifndef OTTEMPLATE_OTTEMPLATE_HXX
-#define OTTEMPLATE_OTTEMPLATE_HXX
+#ifndef OTCUBA_OTCUBA_HXX
+#define OTCUBA_OTCUBA_HXX
 
-#include "ottemplate/MyClassImplementation.hxx"
-#include "ottemplate/MyClass.hxx"
+#include "otcuba/VegasAlgorithmImplementation.hxx"
+#include "otcuba/VegasAlgorithm.hxx"
 
-#endif // OTTEMPLATE_OTTEMPLATE_HXX
+#endif // OTCUBA_OTCUBA_HXX
 

@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClass
+ *  @brief VegasAlgorithm
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,44 +18,44 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#include "ottemplate/MyClass.hxx"
-#include "ottemplate/MyClassImplementation.hxx"
+#include "otcuba/VegasAlgorithm.hxx"
+#include "otcuba/VegasAlgorithmImplementation.hxx"
 #include <openturns/PersistentObjectFactory.hxx>
 
 using namespace OT;
 
-namespace OTTEMPLATE
+namespace OTCUBA
 {
 
-CLASSNAMEINIT(MyClass);
+CLASSNAMEINIT(VegasAlgorithm);
 
 /* Default constructor */
-MyClass::MyClass()
-  : TypedInterfaceObject<MyClassImplementation>(new MyClassImplementation)
+VegasAlgorithm::VegasAlgorithm()
+  : TypedInterfaceObject<VegasAlgorithmImplementation>(new VegasAlgorithmImplementation)
 {
   // Nothing to do
 }
 
 
-MyClass::MyClass(const MyClassImplementation & implementation)
-  : TypedInterfaceObject<MyClassImplementation>(implementation.clone())
+VegasAlgorithm::VegasAlgorithm(const VegasAlgorithmImplementation & implementation)
+  : TypedInterfaceObject<VegasAlgorithmImplementation>(implementation.clone())
 {
   // Nothing to do
 }
 
-Point MyClass::square(Point & p) const
+Point VegasAlgorithm::square(Point & p) const
 {
   return getImplementation()->square(p);
 }
 
 /* String converter */
-String MyClass::__repr__() const
+String VegasAlgorithm::__repr__() const
 {
   OSS oss;
-  oss << "class=" << MyClass::GetClassName()
+  oss << "class=" << VegasAlgorithm::GetClassName()
       << " implementation=" << getImplementation()->__repr__();
   return oss;
 }
 
 
-} /* namespace OTTEMPLATE */
+} /* namespace OTCUBA */

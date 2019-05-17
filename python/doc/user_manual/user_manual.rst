@@ -1,10 +1,10 @@
 API Reference
 =============
 
-.. currentmodule:: ottemplate
+.. currentmodule:: otcuba
 
 .. autosummary::
     :toctree: _generated/
     :template: class.rst_t
   
-    MyClass
+    VegasAlgorithm

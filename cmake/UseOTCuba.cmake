@@ -1,8 +1,8 @@
 #                                               -*- cmake -*-
 #
-#  UseOTTemplate.cmake
+#  UseOTCuba.cmake
 #
-#  Use OTTemplate in CMake files
+#  Use OTCuba in CMake files
 #
 #  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
 #
@@ -21,7 +21,7 @@
 #
 #
 
-add_definitions     ( ${OTTEMPLATE_DEFINITIONS} )
-include_directories ( ${OTTEMPLATE_INCLUDE_DIRS} )
-link_directories    ( ${OTTEMPLATE_LIBRARY_DIRS} )
+add_definitions     ( ${OTCUBA_DEFINITIONS} )
+include_directories ( ${OTCUBA_INCLUDE_DIRS} )
+link_directories    ( ${OTCUBA_LIBRARY_DIRS} )
 

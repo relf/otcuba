@@ -1,4 +1,4 @@
-OTTemplate documentation
+OTCuba documentation
 ========================
 
 User documentation

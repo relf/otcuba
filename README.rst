@@ -1,10 +1,10 @@
-.. image:: https://travis-ci.org/openturns/ottemplate.svg?branch=master
-    :target: https://travis-ci.org/openturns/ottemplate
+.. image:: https://travis-ci.org/openturns/otcuba.svg?branch=master
+    :target: https://travis-ci.org/openturns/otcuba
 
-OTTemplate Module
+OTCuba Module
 =================
 
-OTTemplate is a module for OpenTURNS
+OTCuba is a module for OpenTURNS
 
 More information can found at http://www.openturns.org
 

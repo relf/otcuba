@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClassImplementation
+ *  @brief VegasAlgorithmImplementation
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,34 +18,34 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#include "ottemplate/MyClassImplementation.hxx"
+#include "otcuba/VegasAlgorithmImplementation.hxx"
 #include <openturns/PersistentObjectFactory.hxx>
 
 using namespace OT;
 
-namespace OTTEMPLATE
+namespace OTCUBA
 {
 
-CLASSNAMEINIT(MyClassImplementation);
+CLASSNAMEINIT(VegasAlgorithmImplementation);
 
-static Factory<MyClassImplementation> Factory_MyClassImplementation;
+static Factory<VegasAlgorithmImplementation> Factory_VegasAlgorithmImplementation;
 
 
 /* Default constructor */
-MyClassImplementation::MyClassImplementation()
+VegasAlgorithmImplementation::VegasAlgorithmImplementation()
   : PersistentObject()
 {
   // Nothing to do
 }
 
 /* Virtual constructor method */
-MyClassImplementation * MyClassImplementation::clone() const
+VegasAlgorithmImplementation * VegasAlgorithmImplementation::clone() const
 {
-  return new MyClassImplementation(*this);
+  return new VegasAlgorithmImplementation(*this);
 }
 
 /* example of a func that return a point squared. */
-Point MyClassImplementation::square(Point& p) const
+Point VegasAlgorithmImplementation::square(Point& p) const
 {
 
   Point p_out(p.getSize());
@@ -57,24 +57,24 @@ Point MyClassImplementation::square(Point& p) const
 }
 
 /* String converter */
-String MyClassImplementation::__repr__() const
+String VegasAlgorithmImplementation::__repr__() const
 {
   OSS oss;
-  oss << "class=" << MyClassImplementation::GetClassName();
+  oss << "class=" << VegasAlgorithmImplementation::GetClassName();
   return oss;
 }
 
 /* Method save() stores the object through the StorageManager */
-void MyClassImplementation::save(Advocate & adv) const
+void VegasAlgorithmImplementation::save(Advocate & adv) const
 {
   PersistentObject::save( adv );
 }
 
 /* Method load() reloads the object from the StorageManager */
-void MyClassImplementation::load(Advocate & adv)
+void VegasAlgorithmImplementation::load(Advocate & adv)
 {
   PersistentObject::load( adv );
 }
 
 
-} /* namespace OTTEMPLATE */
+} /* namespace OTCUBA */

@@ -1,0 +1,7 @@
+// VegasAlgorithm docstrings are defined in VegasAlgorithmImplementation_doc.i.in
+
+%feature("docstring") OTCUBA::VegasAlgorithm
+OTCUBA_VegasAlgorithm_doc
+%feature("docstring") OTCUBA::VegasAlgorithm::square
+OTCUBA_VegasAlgorithm_square_doc
+

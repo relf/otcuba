@@ -1,6 +1,6 @@
-// SWIG file ottemplate_module.i
+// SWIG file otcuba_module.i
 
-%module(docstring="ottemplate module") ottemplate
+%module(docstring="otcuba module") otcuba
 
 %{
 #include <openturns/OT.hxx>
@@ -17,8 +17,8 @@
 %import uncertainty_module.i
 
 // The new classes
-%include ottemplate/OTTemplateprivate.hxx
-%include MyClassImplementation.i
-%include MyClass.i
+%include otcuba/OTCubaprivate.hxx
+%include VegasAlgorithmImplementation.i
+%include VegasAlgorithm.i
 
 

@@ -1,0 +1,46 @@
+#                                               -*- cmake -*-
+#
+#  OTCubaConfig.cmake(.in)
+#
+#  Find OTCuba includes and libraries
+#
+#  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
+#
+
+# Use the following variables to compile and link against OTCuba:
+#  OTCUBA_FOUND          - True if OTCuba was found on your system
+#  OTCUBA_USE_FILE       - The file making OTCuba usable
+#  OTCUBA_DEFINITIONS    - Definitions needed to build with OTCuba
+#  OTCUBA_INCLUDE_DIRS   - List of directories where OTCuba' header file are
+#  OTCUBA_LIBRARY        - Library name
+#  OTCUBA_LIBRARIES      - List of libraries to link against
+#  OTCUBA_LIBRARY_DIRS   - List of directories containing OTCuba' libraries
+#  OTCUBA_ROOT_DIR       - The base directory of OTCuba
+#  OTCUBA_VERSION_STRING - A human-readable string containing the version
+#  OTCUBA_VERSION_MAJOR  - The major version of OTCuba
+#  OTCUBA_VERSION_MINOR  - The minor version of OTCuba
+#  OTCUBA_VERSION_PATCH  - The patch version of OTCuba
+
+@PACKAGE_INIT@
+
+set ( OTCUBA_FOUND 1 )
+set ( OTCUBA_USE_FILE     "@PACKAGE_OTCUBA_USE_FILE@" )
+
+set ( OTCUBA_DEFINITIONS  "@OTCUBA_DEFINITIONS@" )
+set_and_check (OTCUBA_INCLUDE_DIR  "@PACKAGE_OTCUBA_INCLUDE_DIR@")
+set ( OTCUBA_INCLUDE_DIRS "@PACKAGE_OTCUBA_INCLUDE_DIRS@" )
+set_and_check (OTCUBA_LIBRARY      "@OTCUBA_LIBRARY@")
+set ( OTCUBA_LIBRARIES    "@PACKAGE_OTCUBA_LIBRARIES@" )
+set ( OTCUBA_LIBRARY_DIRS "@PACKAGE_OTCUBA_LIBRARY_DIRS@" )
+set_and_check (OTCUBA_ROOT_DIR     "@PACKAGE_OTCUBA_ROOT_DIR@")
+
+set ( OTCUBA_VERSION_STRING "@OTCUBA_VERSION_STRING@" )
+set ( OTCUBA_VERSION_MAJOR  "@OTCUBA_VERSION_MAJOR@" )
+set ( OTCUBA_VERSION_MINOR  "@OTCUBA_VERSION_MINOR@" )
+set ( OTCUBA_VERSION_PATCH  "@OTCUBA_VERSION_PATCH@" )
+
+set (OTCUBA_SWIG_INCLUDE_DIRS "@PACKAGE_OTCUBA_SWIG_INCLUDE_DIRS@")
+set (OTCUBA_PYTHON@PYTHON_VERSION_MAJOR@_MODULE_PATH "@PACKAGE_PYTHON_MODULE_PATH@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include (${CMAKE_CURRENT_LIST_DIR}/OTCuba-Targets.cmake)

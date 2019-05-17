@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClassImplementation
+ *  @brief VegasAlgorithm
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,50 +18,48 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#ifndef OTTEMPLATE_MYCLASSIMPLEMENTATION_HXX
-#define OTTEMPLATE_MYCLASSIMPLEMENTATION_HXX
+#ifndef OTCUBA_VEGASALGORITHM_HXX
+#define OTCUBA_VEGASALGORITHM_HXX
 
-#include <openturns/PersistentObject.hxx>
+#include <openturns/TypedInterfaceObject.hxx>
 #include <openturns/StorageManager.hxx>
 #include <openturns/Point.hxx>
-#include "ottemplate/OTTemplateprivate.hxx"
+#include "otcuba/OTCubaprivate.hxx"
 
-namespace OTTEMPLATE
+namespace OTCUBA
 {
 
+/* forward declaration */
+class VegasAlgorithmImplementation;
+
 /**
- * @class MyClassImplementation
+ * @class VegasAlgorithm
  *
- * MyClassImplementation is some myclass type to illustrate how to add some classes in OpenTURNS
+ * VegasAlgorithm is some vegasalgorithm type to illustrate how to add some classes in Open TURNS
  */
-class OTTEMPLATE_API MyClassImplementation
-  : public OT::PersistentObject
+class OTCUBA_API VegasAlgorithm
+  : public OT::TypedInterfaceObject<VegasAlgorithmImplementation>
 {
   CLASSNAME;
 
 public:
+
   /** Default constructor */
-  MyClassImplementation();
+  VegasAlgorithm();
 
-  /** Virtual constructor method */
-  MyClassImplementation * clone() const;
+  /** Constructor from implementation */
+  VegasAlgorithm(const VegasAlgorithmImplementation & implementation);
 
-  /** example of a func that return a point squared. **/
-  OT::Point square(OT::Point& p) const;
+  /** a func that return a point squared. **/
+  OT::Point square(OT::Point & p) const;
 
   /** String converter */
   OT::String __repr__() const;
 
-  /** Method save() stores the object through the StorageManager */
-  virtual void save(OT::Advocate & adv) const;
-
-  /** Method load() reloads the object from the StorageManager */
-  virtual void load(OT::Advocate & adv);
-
 private:
 
-}; /* class MyClassImplementation */
+}; /* class VegasAlgorithm */
 
-} /* namespace OTTEMPLATE */
+} /* namespace OTCUBA */
 
-#endif /* OTTEMPLATE_MYCLASSIMPLEMENTATION_HXX */
+#endif /* OTCUBA_VEGASALGORITHM_HXX */

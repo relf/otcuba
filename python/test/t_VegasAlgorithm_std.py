@@ -2,9 +2,9 @@
 
 from __future__ import print_function
 import openturns as ot
-import ottemplate
+import otcuba
 
-a = ottemplate.MyClass()
+a = otcuba.VegasAlgorithm()
 print(a)
 
 p = ot.Point([2, 3])
